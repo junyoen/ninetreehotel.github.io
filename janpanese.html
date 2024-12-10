@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>朝食サービスの満足度アンケート</title>
+    <style>
+        body {
+            font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, "メイリオ", sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .radio-group {
+            margin: 10px 0;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>朝食サービスの満足度アンケート</h1>
+    <p>当レストランをご利用いただき、誠にありがとうございます。</p>
+    <p>お客様からの貴重なご意見は、今後の朝食サービスの品質改善に生かして参ります。</p>
+    <p>朝食でより快適なご体験を提供できるよう、本アンケートにご協力いただけますと幸いです。</p>
+    <p>全14問の質問で構成されており、約3分程度を見込んでおります。</p>
+
+    <form id="surveyForm">
+        <div class="form-group">
+            <label>国籍</label>
+            <input type="text" name="nationality" required>
+        </div>
+
+        <div class="form-group">
+            <label>性別</label>
+            <div class="radio-group">
+                <input type="radio" name="gender" value="male" required> 男性
+                <input type="radio" name="gender" value="female"> 女性
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>年齢</label>
+            <div class="radio-group">
+                <input type="radio" name="age" value="10s" required> 10代
+                <input type="radio" name="age" value="20s"> 20代
+                <input type="radio" name="age" value="30s"> 30代
+                <input type="radio" name="age" value="40s"> 40代
+                <input type="radio" name="age" value="50s"> 50代
+                <input type="radio" name="age" value="60s"> 60代以上
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>旅行の形</label>
+            <div class="radio-group">
+                <input type="radio" name="visitType" value="family" required> 家族
+                <input type="radio" name="visitType" value="couple"> 恋人
+                <input type="radio" name="visitType" value="friends"> 友人
+                <input type="radio" name="visitType" value="colleagues"> 職場の同僚
+                <input type="radio" name="visitType" value="alone"> ひとり旅
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>1. 全体的な朝食の満足度</label>
+            <div class="radio-group">
+                <input type="radio" name="overall" value="5" required> 5
+                <input type="radio" name="overall" value="4"> 4
+                <input type="radio" name="overall" value="3"> 3
+                <input type="radio" name="overall" value="2"> 2
+                <input type="radio" name="overall" value="1"> 1
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>2. メニューのバリエーション</label>
+            <div class="radio-group">
+                <input type="radio" name="variety" value="5" required> 5
+                <input type="radio" name="variety" value="4"> 4
+                <input type="radio" name="variety" value="3"> 3
+                <input type="radio" name="variety" value="2"> 2
+                <input type="radio" name="variety" value="1"> 1
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>3. 料理の味・クオリティ</label>
+            <div class="radio-group">
+                <input type="radio" name="taste" value="5" required> 5
+                <input type="radio" name="taste" value="4"> 4
+                <input type="radio" name="taste" value="3"> 3
+                <input type="radio" name="taste" value="2"> 2
+                <input type="radio" name="taste" value="1"> 1
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>4. レストランの清潔度</label>
+            <div class="radio-group">
+                <input type="radio" name="cleanliness" value="5" required> 5
+                <input type="radio" name="cleanliness" value="4"> 4
+                <input type="radio" name="cleanliness" value="3"> 3
+                <input type="radio" name="cleanliness" value="2"> 2
+                <input type="radio" name="cleanliness" value="1"> 1
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>5. 従業員からのサービス</label>
+            <div class="radio-group">
+                <input type="radio" name="service" value="5" required> 5
+                <input type="radio" name="service" value="4"> 4
+                <input type="radio" name="service" value="3"> 3
+                <input type="radio" name="service" value="2"> 2
+                <input type="radio" name="service" value="1"> 1
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>6. コストの適切さ</label>
+            <div class="radio-group">
+                <input type="radio" name="price" value="5" required> 5
+                <input type="radio" name="price" value="4"> 4
+                <input type="radio" name="price" value="3"> 3
+                <input type="radio" name="price" value="2"> 2
+                <input type="radio" name="price" value="1"> 1
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>7. リピートの意向</label>
+            <div class="radio-group">
+                <input type="radio" name="revisit" value="yes" required> はい
+                <input type="radio" name="revisit" value="no"> いいえ
+                <input type="radio" name="revisit" value="maybe"> どちらとも言えない
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>8. メニューのご希望はございますか？</label>
+            <div class="radio-group">
+                <input type="checkbox" name="additional_menu" value="fruits"> 果物
+                <input type="checkbox" name="additional_menu" value="bread"> パン
+                <input type="checkbox" name="additional_menu" value="healthy"> ヘルシー(サラダ・低糖質ヨーグルト)
+                <input type="checkbox" name="additional_menu" value="korean"> 韓国料理
+                <input type="checkbox" name="additional_menu" value="vegetarian"> ベジタリアン
+                <input type="checkbox" name="additional_menu" value="desserts"> デザート
+                <input type="text" name="additional_menu_other" placeholder="その他">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>9. 朝食のご利用の際、一番満足できた部分は何ですか？</label>
+            <textarea name="satisfaction" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>10. 当レストランの朝食において、改善が必要と考えられる部分は何ですか？</label>
+            <textarea name="improvement" required></textarea>
+        </div>
+
+        <button type="submit">送信する</button>
+    </form>
+
+    <p>本アンケートにご協力いただき、心より感謝申し上げます。</p>
+</body>
+</html>
