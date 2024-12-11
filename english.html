@@ -6,180 +6,18 @@
     <title>Breakfast Service Satisfaction Survey</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
         }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .radio-group {
-            margin: 10px 0;
-        }
-        textarea {
+        iframe {
             width: 100%;
-            height: 100px;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
+            height: 100%;
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <h1>Breakfast Service Satisfaction Survey</h1>
-    <p>Thank you for visiting our restaurant.</p>
-    <p>Your valuable feedback will be used as important data to improve the quality of our breakfast service.</p>
-    <p>We would greatly appreciate your participation in this survey to help us provide a better breakfast experience.</p>
-    <p>The survey consists of 14 questions and will take approximately 3 minutes to complete.</p>
-
-    <form id="surveyForm">
-        <div class="form-group">
-            <label>Nationality</label>
-            <input type="text" name="nationality" required>
-        </div>
-
-        <div class="form-group">
-            <label>Gender</label>
-            <div class="radio-group">
-                <input type="radio" name="gender" value="male" required> Male
-                <input type="radio" name="gender" value="female"> Female
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label>Age Group</label>
-            <div class="radio-group">
-                <input type="radio" name="age" value="teens" required> Teens
-                <input type="radio" name="age" value="20s"> 20s
-                <input type="radio" name="age" value="30s"> 30s
-                <input type="radio" name="age" value="40s"> 40s
-                <input type="radio" name="age" value="50s"> 50s
-                <input type="radio" name="age" value="60s"> 60s and above
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label>Type of Visit</label>
-            <div class="radio-group">
-                <input type="radio" name="visitType" value="family" required> Family
-                <input type="radio" name="visitType" value="couple"> Couple
-                <input type="radio" name="visitType" value="friends"> Friends
-                <input type="radio" name="visitType" value="colleagues"> Colleagues
-                <input type="radio" name="visitType" value="alone"> Alone
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label>1. Overall satisfaction with the breakfast service</label>
-            <div class="radio-group">
-                <input type="radio" name="overall" value="5" required> 5
-                <input type="radio" name="overall" value="4"> 4
-                <input type="radio" name="overall" value="3"> 3
-                <input type="radio" name="overall" value="2"> 2
-                <input type="radio" name="overall" value="1"> 1
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label>2. Variety of food options</label>
-            <div class="radio-group">
-                <input type="radio" name="variety" value="5" required> 5
-                <input type="radio" name="variety" value="4"> 4
-                <input type="radio" name="variety" value="3"> 3
-                <input type="radio" name="variety" value="2"> 2
-                <input type="radio" name="variety" value="1"> 1
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label>3. Taste and quality of the food</label>
-            <div class="radio-group">
-                <input type="radio" name="taste" value="5" required> 5
-                <input type="radio" name="taste" value="4"> 4
-                <input type="radio" name="taste" value="3"> 3
-                <input type="radio" name="taste" value="2"> 2
-                <input type="radio" name="taste" value="1"> 1
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label>4. Cleanliness of the restaurant</label>
-            <div class="radio-group">
-                <input type="radio" name="cleanliness" value="5" required> 5
-                <input type="radio" name="cleanliness" value="4"> 4
-                <input type="radio" name="cleanliness" value="3"> 3
-                <input type="radio" name="cleanliness" value="2"> 2
-                <input type="radio" name="cleanliness" value="1"> 1
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label>5. Staff service</label>
-            <div class="radio-group">
-                <input type="radio" name="service" value="5" required> 5
-                <input type="radio" name="service" value="4"> 4
-                <input type="radio" name="service" value="3"> 3
-                <input type="radio" name="service" value="2"> 2
-                <input type="radio" name="service" value="1"> 1
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label>6. Reasonableness of the breakfast price</label>
-            <div class="radio-group">
-                <input type="radio" name="price" value="5" required> 5
-                <input type="radio" name="price" value="4"> 4
-                <input type="radio" name="price" value="3"> 3
-                <input type="radio" name="price" value="2"> 2
-                <input type="radio" name="price" value="1"> 1
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label>7. Would you visit again for breakfast?</label>
-            <div class="radio-group">
-                <input type="radio" name="revisit" value="yes" required> Yes
-                <input type="radio" name="revisit" value="no"> No
-                <input type="radio" name="revisit" value="maybe"> Not Sure
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label>8. Are there any additional menu items you would like?</label>
-            <div class="radio-group">
-                <input type="checkbox" name="additional_menu" value="fruits"> Fruits
-                <input type="checkbox" name="additional_menu" value="bread"> Bread
-                <input type="checkbox" name="additional_menu" value="healthy"> Healthy options (salads, low-sugar yogurt)
-                <input type="checkbox" name="additional_menu" value="korean"> Korean dishes
-                <input type="checkbox" name="additional_menu" value="vegetarian"> Vegetarian options
-                <input type="checkbox" name="additional_menu" value="desserts"> Desserts
-                <input type="text" name="additional_menu_other" placeholder="Others (please specify)">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label>9. What was the most satisfying aspect of your breakfast experience?</label>
-            <textarea name="satisfaction" required></textarea>
-        </div>
-
-        <div class="form-group">
-            <label>10. What improvements do you think are necessary for the breakfast service?</label>
-            <textarea name="improvement" required></textarea>
-        </div>
-
-        <button type="submit">Submit</button>
-    </form>
-
-    <p>Thank you for participating in the survey.</p>
+    <iframe src="https://docs.google.com/forms/d/1Aa6hj2mb-DDiDWoAyiPJ3tV_CVmTQtNqGIJ8bgQu9ww/edit#settings</iframe>
 </body>
 </html>
